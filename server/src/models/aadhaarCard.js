@@ -12,6 +12,10 @@ const aadhaarSchema = new mongoose.Schema({
     aadhaarNumber : {
         type: String
     },
+    isFavourite : {
+        type : Boolean,
+        default: false
+    },
     userID : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

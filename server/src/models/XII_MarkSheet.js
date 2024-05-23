@@ -9,6 +9,10 @@ const xiiMarkSheetSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    isFavourite : {
+        type : Boolean,
+        default: false
+    },
     userID : {
         type: mongoose.Schema.Types.ObjectId,
         ref:'User'

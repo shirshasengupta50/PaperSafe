@@ -19,8 +19,18 @@ const userSchema = new mongoose.Schema({
     },
     emailID : {
         type: String,
-        required: true,
         unique: true
+    },
+    dob : {
+        type: Date,
+        require: true
+    },
+    gender : {
+        type: String,
+        enum: {
+            values: ['Male', 'Female', 'Others'],
+            message: '{VALUE} is not supported'
+          }
     },
     uniqueID : {
         type: String,

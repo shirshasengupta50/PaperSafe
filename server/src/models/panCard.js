@@ -12,6 +12,10 @@ const panSchema = new mongoose.Schema({
     panNumber : {
         type: String
     },
+    isFavourite : {
+        type : Boolean,
+        default: false
+    },
     userID : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
