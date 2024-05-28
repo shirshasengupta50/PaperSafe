@@ -26,9 +26,19 @@ class CrudRepository{
         }
     }
 
-    async get(id){
+    async getById(id){
         try {
             const response = await this.model.findById(id);
+            return response;
+        } catch (error) {
+            console.log("Error in CRUD Repository Layer");
+            throw {error};
+        }
+    }
+
+    async getByNumber(mobileNumber){
+        try {
+            const response = await this.model.findOne({mobileNumber});
             return response;
         } catch (error) {
             console.log("Error in CRUD Repository Layer");
@@ -46,3 +56,5 @@ class CrudRepository{
         }
     }
 }
+
+module.exports = CrudRepository;
