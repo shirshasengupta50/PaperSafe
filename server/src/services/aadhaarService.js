@@ -26,6 +26,7 @@ class AadhaarCardService{
             return response;
             
         } catch (error) {
+            console.log("Error inService Layer");
             throw error;
         }
     }
