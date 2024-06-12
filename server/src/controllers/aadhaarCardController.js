@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const { AadhaarCardService } = require('../services/index');
 
 const aadhaarCardService = new AadhaarCardService();
@@ -26,6 +28,32 @@ const uploadAadhaar = async(req, res)=>{
     }
 }
 
+const downloadAadhaar = async(req, res)=>{
+    try {
+        const userID = req.params.id;
+
+        const response = await aadhaarCardService.downloadAadhaar(userID);
+        
+        return res.status(200).sendFile(response.decryptedFilePath, (err) => {
+            if(err){
+                throw err;
+            }
+            fs.unlinkSync(response.encryptedFilePath);
+            fs.unlinkSync(response.decryptedFilePath);
+        });
+
+    } catch (error) {
+        console.log("Error in Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: error,
+            success: false,
+            message: "Failed to Download Aadhaar"
+        });
+    }
+}
+
 module.exports = {
-    uploadAadhaar
+    uploadAadhaar,
+    downloadAadhaar
 }
