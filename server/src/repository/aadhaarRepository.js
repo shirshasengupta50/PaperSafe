@@ -1,4 +1,4 @@
-const {CrudRepository} = require('./index');
+const CrudRepository = require('./crudRepository');
 const { AadhaarCard } = require('../models/index');
 
 class AadhaarCardRepository extends CrudRepository{

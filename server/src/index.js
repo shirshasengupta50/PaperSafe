@@ -16,7 +16,7 @@ const setupAndStartServer = async()=>{
 
     app.listen(PORT, ()=>{
         console.log(`Server Running on PORT at ${PORT}`);
-        // dbConnect();
+        dbConnect();
         cloudConfig();
     });
 }

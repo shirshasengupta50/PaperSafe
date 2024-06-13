@@ -1,6 +1,6 @@
 const express = require('express');
 
-const upload = require('../../middlewares/index');
+const { upload } = require('../../middlewares/index');
 const { aadhaarCardController } = require('../../controllers/index');
 
 const router = express.Router();
