@@ -1,3 +1,4 @@
+const { generateOTP, saveOTP, validateOTP, sendOTP } = require('../utils/helper/index');
 const { UserRepository } = require('../repository/index');
 const { uniqueIDGenerator } = require('../utils/helper/index');
 
@@ -16,10 +17,54 @@ class UserService{
             return response;
 
         } catch (error) {
-            console.log("Error Occure in Service Layer");
+            console.log("Error Occure in User Service Layer");
             throw error;
         }
     }
+
+    async sendOPT(phoneNum){
+        try {
+            const otp = generateOTP();
+            saveOTP(phoneNum, otp);
+
+            await sendOTP(phoneNum, otp);
+
+            const response = 'OTP Sent Successfully';
+
+            return response;
+
+        } catch (error) {
+            console.log("Error Occure in User Service Layer");
+            throw error;
+        }
+    }
+
+    verifyOTP(phoneNum, otp){
+
+        if(validateOTP(phoneNum, otp)){
+
+            const user = this.getUserByNumber(phoneNum);
+
+            if(user){
+
+                return {
+                    doExist: true,
+                    user: user
+                };
+
+            }else{
+
+                return {
+                    doExist: false,
+                    user: {}
+                };
+            }
+
+        }else{
+            throw new Error('Invalid OTP');
+        }
+    }
+
 
     async getUserById(id){
         try {
