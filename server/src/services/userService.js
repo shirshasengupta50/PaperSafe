@@ -25,16 +25,17 @@ class UserService{
     async sendOPT(phoneNum){
         try {
             const otp = generateOTP();
+            console.log(otp);
             saveOTP(phoneNum, otp);
-
+            console.log('done');
             await sendOTP(phoneNum, otp);
-
+            console.log('done');
             const response = 'OTP Sent Successfully';
 
             return response;
 
         } catch (error) {
-            console.log("Error Occure in User Service Layer");
+            console.log("Error Occur in User Service Layer");
             throw error;
         }
     }

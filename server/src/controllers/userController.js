@@ -25,6 +25,54 @@ const userRegistration = async(req, res)=>{
     }
 }
 
+const otpRequest = async(req, res)=>{
+    try {
+        const { phoneNum } = req.body;
+
+        const response = await userService.sendOPT(phoneNum);
+        return res.status(200).json({
+            data: response,
+            error:{},
+            success: true,
+            message: "OTP Successfully Sent"
+        });
+
+    } catch (error) {
+        console.log("Error in User Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: error,
+            success: false,
+            message: "Failed to Send OTP"
+        });
+    }
+}
+
+const otpVerification = (req, res)=>{
+    try {
+        const { phoneNum, otp } = req.body;
+
+        const response = userService.verifyOTP(phoneNum, otp);
+        return res.status(200).json({
+            data: response,
+            error:{},
+            success: true,
+            message: "Verified"
+        });
+
+    } catch (error) {
+        console.log("Error in User Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: error,
+            success: false,
+            message: "Invalid OTP"
+        });
+    }
+}
+
 module.exports = {
-    userRegistration
+    userRegistration,
+    otpRequest,
+    otpVerification
 }
