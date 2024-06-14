@@ -48,11 +48,11 @@ const otpRequest = async(req, res)=>{
     }
 }
 
-const otpVerification = (req, res)=>{
+const otpVerification = async(req, res)=>{
     try {
         const { emailID, otp } = req.body;
 
-        const response = userService.verifyOTP(emailID, otp);
+        const response = await userService.verifyOTP(emailID, otp);
         return res.status(200).json({
             data: response,
             error:{},

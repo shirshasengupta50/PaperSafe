@@ -40,30 +40,37 @@ class UserService{
         }
     }
 
-    verifyOTP(emailID, otp){
+    async verifyOTP(emailID, otp){
 
-        if(validateOTP(emailID, otp)){
+        try {
+            if(validateOTP(emailID, otp)){
 
-            const user = this.getUserByEmail(emailID);
-
-            if(user){
-
-                return {
-                    doExist: true,
-                    user: user
-                };
-
+                const user = await this.getUserByEmail(emailID);
+    
+                if(user){
+    
+                    return {
+                        doExist: true,
+                        user: user
+                    };
+    
+                }else{
+    
+                    return {
+                        doExist: false,
+                        user: {}
+                    };
+                }
+    
             }else{
-
-                return {
-                    doExist: false,
-                    user: {}
-                };
+                throw new Error('Invalid OTP');
             }
-
-        }else{
-            throw new Error('Invalid OTP');
+        } catch (error) {
+            console.log('Error in User Service');
+            throw error;
         }
+
+        
     }
 
 
