@@ -2,14 +2,14 @@ const NodeCache = require('node-cache');
 
 const otpCache = new NodeCache({ stdTTL: 180 });
 
-const saveOTP = (phone, otp) => {
-  otpCache.set(phone, otp);
+const saveOTP = (emailID, otp) => {
+  otpCache.set(emailID, otp);
 };
 
-const validateOTP = (phone, otp) => {
-  const storedOTP = otpCache.get(phone);
+const validateOTP = (emailID, otp) => {
+  const storedOTP = otpCache.get(emailID);
   if (storedOTP && storedOTP === otp) {
-    otpCache.del(phone);
+    otpCache.del(emailID);
     return true;
   }
   return false;

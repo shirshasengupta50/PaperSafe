@@ -1,15 +1,32 @@
-const twilio = require('twilio');
+const nodemailer = require('nodemailer');
 
-const{ TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER } = require('../../config/serverConfig');
+const { EMAIL_ID, EMAIL_PASSKEY } = require('../../config/serverConfig');
 
-const client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: EMAIL_ID,
+    pass: EMAIL_PASSKEY
+  }
+});
 
-const sendOTP = (phone, otp) => {
-  return client.messages.create({
-    body: `Your OTP is ${otp}`,
-    to: phone,
-    from: TWILIO_PHONE_NUMBER
-  });
-};
+const sendOTP = async(emailID, otp) => {
+  try {
+
+    const info = await transporter.sendMail({
+      from: 'PaperSafe',
+      to: emailID,
+      subject: 'PaperSafe Verification Code',
+      text: `Your Verification Code is ${otp}`
+    });
+
+    return true;
+
+  } catch (error) {
+    console.log('Error Occured in OTP Sending');
+    throw error;
+  }
+} 
+
 
 module.exports = sendOTP;

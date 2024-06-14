@@ -27,9 +27,9 @@ const userRegistration = async(req, res)=>{
 
 const otpRequest = async(req, res)=>{
     try {
-        const { phoneNum } = req.body;
+        const { emailID } = req.body;
 
-        const response = await userService.sendOPT(phoneNum);
+        const response = await userService.sendOPT(emailID);
         return res.status(200).json({
             data: response,
             error:{},
@@ -50,9 +50,9 @@ const otpRequest = async(req, res)=>{
 
 const otpVerification = (req, res)=>{
     try {
-        const { phoneNum, otp } = req.body;
+        const { emailID, otp } = req.body;
 
-        const response = userService.verifyOTP(phoneNum, otp);
+        const response = userService.verifyOTP(emailID, otp);
         return res.status(200).json({
             data: response,
             error:{},

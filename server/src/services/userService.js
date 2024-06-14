@@ -22,14 +22,14 @@ class UserService{
         }
     }
 
-    async sendOPT(phoneNum){
+    async sendOPT(emailID){
         try {
             const otp = generateOTP();
-            console.log(otp);
-            saveOTP(phoneNum, otp);
-            console.log('done');
-            await sendOTP(phoneNum, otp);
-            console.log('done');
+            
+            saveOTP(emailID, otp);
+            
+            await sendOTP(emailID, otp);
+            
             const response = 'OTP Sent Successfully';
 
             return response;
@@ -40,11 +40,11 @@ class UserService{
         }
     }
 
-    verifyOTP(phoneNum, otp){
+    verifyOTP(emailID, otp){
 
-        if(validateOTP(phoneNum, otp)){
+        if(validateOTP(emailID, otp)){
 
-            const user = this.getUserByNumber(phoneNum);
+            const user = this.getUserByEmail(emailID);
 
             if(user){
 
@@ -77,9 +77,9 @@ class UserService{
         }
     }
 
-    async getUserByNumber(mobileNumber){
+    async getUserByEmail(emailID){
         try {
-            const response = this.userRepository.getByNumber(mobileNumber);
+            const response = this.userRepository.getByEmail(emailID);
             return response;
         } catch (error) {
             console.log("Error in Service Layer");

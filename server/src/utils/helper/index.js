@@ -1,4 +1,5 @@
 const { saveOTP, validateOTP } = require('./optStorage');
+const sendOTP = require('./otpSender');
 
 module.exports = {
     uniqueIDGenerator: require("./uniqueIDGenerator"),
@@ -7,5 +8,5 @@ module.exports = {
     generateOTP: require('./otpGeneration'),
     saveOTP,
     validateOTP,
-    sendOTP: require('./otpSender')
+    sendOTP: sendOTP
 }

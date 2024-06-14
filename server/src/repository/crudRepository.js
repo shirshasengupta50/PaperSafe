@@ -36,9 +36,9 @@ class CrudRepository{
         }
     }
 
-    async getByNumber(mobileNumber){
+    async getByEmail(emailID){
         try {
-            const response = await this.model.findOne({mobileNumber});
+            const response = await this.model.findOne({emailID});
             return response;
         } catch (error) {
             console.log("Error in CRUD Repository Layer");
