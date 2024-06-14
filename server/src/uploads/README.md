@@ -6,7 +6,7 @@ This directory temporarily holds files during their upload process to the cloud 
 
 ## Structure
 
-uploads/
+uploads/<br/>
   └── README.md
 
 

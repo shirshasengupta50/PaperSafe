@@ -6,12 +6,9 @@ This directory temporarily holds files during their download process from the cl
 
 ## Structure
 
-downloads/
+downloads/<br/>
   └── README.md
 
-
-
-- **temp/**: Contains temporary files being downloaded from the cloud.
 
 ## Usage
 
