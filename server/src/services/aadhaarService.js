@@ -74,6 +74,16 @@ class AadhaarCardService{
             throw error;
           }
     }
+
+    async deleteAadhaar(id){
+      try {
+        await this.aadhaarCardRepository.remove(id);
+
+        return true;
+      } catch (error) {
+        console.log('')
+      }
+    }
     
 }
 
