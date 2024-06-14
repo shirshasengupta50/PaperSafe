@@ -76,7 +76,7 @@ const updateUserInfo = async(req, res) => {
         const id = req.params.id;
         const data = req.body;
 
-        const response = userService.updateUserInfo(id, data);
+        const response = await userService.updateUserInfo(id, data);
         return res.status(200).json({
             data: response,
             error:{},
@@ -98,7 +98,7 @@ const deleteUser = async(req, res) => {
     try {
         const id = req.params.id;
 
-        const response = userService.deleteUserUser(id);
+        const response = await userService.deleteUser(id);
         return res.status(200).json({
             data: response,
             error:{},
