@@ -72,7 +72,7 @@ class UserService{
             const response = this.userRepository.getById(id);
             return response;
         } catch (error) {
-            console.log("Error in Service Layer");
+            console.log("Error in User Service Layer");
             throw error;
         }
     }
@@ -82,7 +82,17 @@ class UserService{
             const response = this.userRepository.getByEmail(emailID);
             return response;
         } catch (error) {
-            console.log("Error in Service Layer");
+            console.log("Error in User Service Layer");
+            throw error;
+        }
+    }
+
+    async updateUserInfo(id, data){
+        try {
+            const response = this.userRepository.update(id, data);
+            return response;
+        } catch (error) {
+            console.log("Error in User Service Layer");
             throw error;
         }
     }
@@ -92,7 +102,7 @@ class UserService{
             const response = this.userRepository.remove(id);
             return response;
         } catch (error) {
-            console.log("Error in Service Layer");
+            console.log("Error in User Service Layer");
             throw error;
         }
     }

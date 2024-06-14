@@ -71,8 +71,55 @@ const otpVerification = (req, res)=>{
     }
 }
 
+const updateUserInfo = async(req, res) => {
+    try {
+        const id = req.params.id;
+        const data = req.body;
+
+        const response = userService.updateUserInfo(id, data);
+        return res.status(200).json({
+            data: response,
+            error:{},
+            success: true,
+            message: "User Info Modified"
+        })
+    } catch (error) {
+        console.log("Error in User Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: error,
+            success: false,
+            message: "Unable to modify User Info"
+        });
+    }
+}
+
+const deleteUser = async(req, res) => {
+    try {
+        const id = req.params.id;
+
+        const response = userService.deleteUserUser(id);
+        return res.status(200).json({
+            data: response,
+            error:{},
+            success: true,
+            message: "User Deleted Successfully"
+        })
+    } catch (error) {
+        console.log("Error in User Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: error,
+            success: false,
+            message: "Unable to delete User"
+        });
+    }
+}
+
 module.exports = {
     userRegistration,
     otpRequest,
-    otpVerification
+    otpVerification,
+    updateUserInfo,
+    deleteUser
 }
