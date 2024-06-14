@@ -1,5 +1,3 @@
-### README for the `uploads` Folder (`uploads/README.md`)
-
 # 📂 Uploads Directory
 
 ## Overview

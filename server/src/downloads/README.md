@@ -1,7 +1,3 @@
-
-### README for the `downloads` Folder (`downloads/README.md`)
-
-```markdown
 # 📂 Downloads Directory
 
 ## Overview
