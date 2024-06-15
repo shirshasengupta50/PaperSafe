@@ -8,6 +8,6 @@ router.post('/register', userController.userRegistration);
 router.post('/requestOTP', userController.otpRequest);
 router.post('/verifyOTP', userController.otpVerification);
 router.post('/updateUser/:id', userController.updateUserInfo);
-router.post('/deleteUser/:id', userController.deleteUser);
+router.delete('/deleteUser/:id', userController.deleteUser);
 
 module.exports = router;
