@@ -13,8 +13,9 @@ class AadhaarCardService{
 
     async uploadAadhaar(data, filePath){
         try {
-
+          
             const encryptedFilePath = await encryptImage(filePath);
+
             const result = await cloudinary.uploader.upload(encryptedFilePath, {
                 resource_type: 'raw',
               });
