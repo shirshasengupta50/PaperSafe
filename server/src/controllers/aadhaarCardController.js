@@ -70,7 +70,7 @@ const deleteAadhaar = async(req, res)=>{
         console.log("Error in Controller Layer");
         return res.status(500).json({
             data: {},
-            error: error,
+            error: {error},
             success: false,
             message: "Failed to Delete Aadhaar"
         });

@@ -5,8 +5,8 @@ const { Buffer } = require('buffer');
 
 const { ENCRYPTION_KEY, IV } = require('../../config/serverConfig');
 
-const encryptionKey = Buffer.from(ENCRYPTION_KEY, 'base64');
-const iv = Buffer.from(IV, 'base64');
+const encryptionKey = Buffer.from(ENCRYPTION_KEY, 'hex');
+const iv = Buffer.from(IV, 'hex');
 
 const decryptImage = async (filePath, outputPath) => {
     try {

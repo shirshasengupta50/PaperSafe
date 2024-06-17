@@ -72,7 +72,7 @@ class AadhaarCardService{
 
           } catch (error) {
             console.log('Error in Aadhaar Service Layer');
-            throw error;
+            throw {error};
           }
     }
 
