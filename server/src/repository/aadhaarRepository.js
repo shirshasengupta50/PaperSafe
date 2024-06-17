@@ -15,6 +15,18 @@ class AadhaarCardRepository extends CrudRepository{
             throw {error};
         }
     }
+
+    async deleteAadhaar(userID){
+        try {
+            await this.model.deleteOne({
+                userID: userID
+            });
+            return true;
+        } catch (error) {
+            console.log("Error in Aadhaar Repository Layer");
+            throw {error};
+        }
+    }
     
 }
 

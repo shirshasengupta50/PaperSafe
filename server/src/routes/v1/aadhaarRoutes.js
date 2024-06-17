@@ -7,5 +7,6 @@ const router = express.Router();
 
 router.post('/uploadAadhaar', upload.single('aadhaar'), aadhaarCardController.uploadAadhaar);
 router.get('/downloadAadhaar/:id', aadhaarCardController.downloadAadhaar);
+router.delete('/deleteAadhaar/:id', aadhaarCardController.deleteAadhaar);
 
 module.exports = router;

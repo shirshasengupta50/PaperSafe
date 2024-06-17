@@ -76,13 +76,14 @@ class AadhaarCardService{
           }
     }
 
-    async deleteAadhaar(id){
+    async deleteAadhaar(userID){
       try {
-        await this.aadhaarCardRepository.remove(id);
+        await this.aadhaarCardRepository.remove(userID);
 
         return true;
       } catch (error) {
-        console.log('')
+        console.log('Error in Aadhaar Service Layer');
+        throw error;
       }
     }
     
