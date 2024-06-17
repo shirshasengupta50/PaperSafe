@@ -73,6 +73,17 @@ class PANCardService{
             console.log('Error in PAN Service Layer');
             throw error;
           }
+     }
+
+    async deletePANCard(userID){
+      try {
+        await this.panCardRepository.deletePAN(userID);
+
+        return true;
+      } catch (error) {
+        console.log('Error in PAN Service Layer');
+        throw error;
+      }
     }
     
 }

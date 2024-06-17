@@ -53,7 +53,32 @@ const downloadPAN = async(req, res)=>{
     }
 }
 
+const deletePANCard = async(req, res)=>{
+    try {
+        const userID = req.params.id;
+
+        await panCardService.deletePANCard(userID);
+        
+        return res.status(200).json({
+            data: {},
+            error: {},
+            success: true,
+            message: "Successfully Deleted PAN"
+        });;
+
+    } catch (error) {
+        console.log("Error in PAN Controller Layer");
+        return res.status(500).json({
+            data: {},
+            error: {error},
+            success: false,
+            message: "Failed to Delete PAN"
+        });
+    }
+}
+
 module.exports = {
     uploadPAN,
-    downloadPAN
+    downloadPAN,
+    deletePANCard
 }
