@@ -3,5 +3,6 @@ module.exports = {
     panCardController: require('./panCardController'),
     userController: require('./userController'),
     XMarkSheetController: require('./x_MarkSheetController'),
-    XIIMarkSheetController: require('./xii_MarkSheetController')
+    XIIMarkSheetController: require('./xii_MarkSheetController'),
+    movieTicketController: require('./movieTicketController')
 }

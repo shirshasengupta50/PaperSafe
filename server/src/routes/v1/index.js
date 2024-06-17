@@ -3,5 +3,6 @@ module.exports = {
     apiV1PANRoutes : require('./panCardRoutes'),
     apiV1UserRoutes : require('./userRoutes'),
     apiV1XMarkSheetRoutes : require('./xMarkSheetRoutes'),
-    apiV1XIIMarkSheetRoutes : require('./xiiMakSheetRoutes')
+    apiV1XIIMarkSheetRoutes : require('./xiiMakSheetRoutes'),
+    apiV1MovieTicketRoutes : require('./movieTicketRoutes')
 }
