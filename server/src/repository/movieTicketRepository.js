@@ -11,7 +11,7 @@ class MovieTicketRepository extends CrudRepository{
             const response = await this.model.find({userID});
             return response;
         } catch (error) {
-            console.log("Error in Aadhaar Repository Layer");
+            console.log("Error in Movie Ticket Repository Layer");
             throw {error};
         }
     }

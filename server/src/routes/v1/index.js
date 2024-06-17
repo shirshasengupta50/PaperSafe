@@ -4,5 +4,6 @@ module.exports = {
     apiV1UserRoutes : require('./userRoutes'),
     apiV1XMarkSheetRoutes : require('./xMarkSheetRoutes'),
     apiV1XIIMarkSheetRoutes : require('./xiiMakSheetRoutes'),
-    apiV1MovieTicketRoutes : require('./movieTicketRoutes')
+    apiV1MovieTicketRoutes : require('./movieTicketRoutes'),
+    apiV1TrainTicketRoutes : require('./trainTicketRoutes')
 }

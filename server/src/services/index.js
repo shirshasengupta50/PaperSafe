@@ -4,6 +4,7 @@ const PANCardService = require("./panCardService");
 const XMarkSheetService = require('./X_MarkSheetService');
 const XIIMarkSheetService = require("./XII_MarkSheetService");
 const MovieTicketService = require("./movieTicketService");
+const TrainTicketService = require("./trainTicketService");
 
 module.exports = {
     UserService,
@@ -11,5 +12,6 @@ module.exports = {
     PANCardService,
     XMarkSheetService,
     XIIMarkSheetService,
-    MovieTicketService
+    MovieTicketService,
+    TrainTicketService
 }
