@@ -78,7 +78,7 @@ class AadhaarCardService{
 
     async deleteAadhaar(userID){
       try {
-        await this.aadhaarCardRepository.remove(userID);
+        await this.aadhaarCardRepository.deleteAadhaar(userID);
 
         return true;
       } catch (error) {

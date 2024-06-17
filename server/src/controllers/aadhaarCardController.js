@@ -59,7 +59,7 @@ const deleteAadhaar = async(req, res)=>{
 
         await aadhaarCardService.deleteAadhaar(userID);
         
-        return res.status(204).json({
+        return res.status(200).json({
             data: {},
             error: {},
             success: true,
