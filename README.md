@@ -56,16 +56,15 @@
 3. Create a `.env` file with the following variables:
 
     ```env
-    PORT=3000
+    PORT= 5555
     MONGODB_URI=your-mongodb-uri
     CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
     CLOUDINARY_API_KEY=your-cloudinary-api-key
     CLOUDINARY_API_SECRET=your-cloudinary-api-secret
-    JWT_SECRET=your-jwt-secret
-    SMTP_HOST=your-smtp-host
-    SMTP_PORT=your-smtp-port
-    SMTP_USER=your-smtp-user
-    SMTP_PASSWORD=your-smtp-password
+    ENCRYPTION_KEY=your-encryption-key
+    IV=your-iv
+    EMAIL_ID=your-emailid
+    EMAIL_PASSKEY=your-passkey
     ```
 
 4. Start the server:
@@ -74,7 +73,7 @@
     npm start
     ```
 
-### Frontend Setup
+<!-- ### Frontend Setup
 
 1. Navigate to the client directory:
 
@@ -94,7 +93,7 @@
 
     ```sh
     flutter run
-    ```
+    ``` -->
 
 ## Usage
 
@@ -123,34 +122,24 @@
 
 Watch a demo of PaperSafe in action:
 
-[![PaperSafe Demo](screenshots/demo-video-thumbnail.png)](https://www.youtube.com/watch?v=your-demo-video-url)
+[![PaperSafe Demo](screenshots/demo-video-thumbnail.png)](https://www.youtube.com/watch?v=MUEMPgpRpT4)
 
-**Note:** Replace the URL `https://www.youtube.com/watch?v=your-demo-video-url` with the actual URL of your demo video on YouTube or any other platform.
 
 ## Folder Structure
 
 ```plaintext
 PaperSafe/
 │
-├── client/               # Flutter app code
-│   ├── lib/
-│   ├── screenshots/      # Screenshots for the README
-│   └── README.md
+├── client/               
 │
 ├── server/               # Node.js backend code
 │   ├── src/
-│   ├── .env.example      # Example environment file
+│   ├── .env              # Example environment file
 │   ├── package.json
 │   └── README.md
 │
 ├── screenshots/          # Screenshots and demo video thumbnail for the main README
-│   ├── login.png
-│   ├── dashboard.png
-│   ├── document-upload.png
-│   ├── document-list.png
-│   └── demo-video-thumbnail.png
 │
-├── .gitignore
 └── README.md             # Main project README
 ```
 
