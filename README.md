@@ -152,3 +152,30 @@ PaperSafe/
 │
 ├── .gitignore
 └── README.md             # Main project README
+```
+
+
+### Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch 
+```sh
+git checkout -b feature-branch
+```
+
+3. Make your changes.
+
+4. Commit your changes 
+```sh 
+git commit -m 'Add some feature'
+```
+
+5. Push to the branch 
+```sh
+git push origin feature-branch
+```
+
+6. Open a pull request.
