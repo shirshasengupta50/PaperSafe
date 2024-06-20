@@ -27,7 +27,6 @@
 - [Demo Video](#demo-video)
 - [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -116,7 +115,6 @@
 ### Document List
 ![Document List](screenshots/document-list.png)
 
-**Note:** Replace the placeholder image paths with the actual paths of your screenshots within the repository. Ensure your screenshots directory is properly named and the images are correctly referenced.
 
 ## Demo Video
 
