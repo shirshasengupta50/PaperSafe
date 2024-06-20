@@ -1,4 +1,4 @@
-# Project Name
+# PaperSafe
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node.js-v14.17.0-green.svg)](https://nodejs.org/)
