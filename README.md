@@ -72,6 +72,10 @@
     npm start
     ```
 
+    ### Frontend Development Status
+
+    **Note :** The client-side of PaperSafe is currently under active development.
+
 <!-- ### Frontend Setup
 
 1. Navigate to the client directory:
