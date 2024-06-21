@@ -12,7 +12,7 @@
 ## Tech Stack
 
 - **Backend:** Node.js, Express.js
-- **Frontend:** Flutter
+- **Frontend:** Flutter, React.js
 - **Database:** MongoDB
 - **Cloud Storage:** Cloudinary
 - **Encryption:** AES-256-CBC
@@ -42,7 +42,7 @@
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-username/PaperSafe.git
+    git clone https://github.com/shirshasengupta50/PaperSafe.git
     cd PaperSafe/server
     ```
 
@@ -114,6 +114,13 @@
 
 ### Document List
 ![Document List](screenshots/document-list.png)
+
+### Database Schema
+![Database Schema](screenshots/Database%20Schema.png)
+
+### Technical Flow Diagrams
+![Technical Flow Diagrams](screenshots/Technical%20Flow%20Diagram.png)
+![Technical Flow Diagrams](screenshots/Technical%20Diagram.png)
 
 
 ## Demo Video
