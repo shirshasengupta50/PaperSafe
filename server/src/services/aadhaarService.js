@@ -76,6 +76,17 @@ class AadhaarCardService{
           }
     }
 
+    async getAadhaarDetails(userID){
+      try {
+        const response = await this.aadhaarCardRepository.getByUserID(userID);
+
+        return response;
+      } catch (error) {
+        console.log('Error in Aadhaar Service Layer');
+        throw error;
+      }
+    }
+
     async deleteAadhaar(userID){
       try {
         await this.aadhaarCardRepository.deleteAadhaar(userID);
