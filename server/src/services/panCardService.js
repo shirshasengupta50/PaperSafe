@@ -75,6 +75,17 @@ class PANCardService{
           }
      }
 
+     async getPANDetails(userID){
+      try {
+        const response = await this.panCardRepository.getByUserID(userID);
+
+        return response;
+      } catch (error) {
+        console.log('Error in PAN Service Layer');
+        throw error;
+      }
+    }
+
     async deletePANCard(userID){
       try {
         await this.panCardRepository.deletePAN(userID);
