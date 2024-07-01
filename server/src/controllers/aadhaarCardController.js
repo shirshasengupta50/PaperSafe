@@ -55,7 +55,7 @@ const downloadAadhaar = async(req, res)=>{
 
 const getAadhaarDetails = async(req, res)=>{
     try {
-        const userID = req.param.id;
+        const userID = req.params.id;
 
         const response = await aadhaarCardService.getAadhaarDetails(userID);
 
