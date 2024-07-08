@@ -131,7 +131,7 @@
 
 Watch a demo of PaperSafe in action:
 
-[![PaperSafe Demo Video]](https://www.youtube.com/watch?v=MUEMPgpRpT4)
+[[PaperSafe Demo Video]](https://www.youtube.com/watch?v=MUEMPgpRpT4)
 
 
 ## Folder Structure
