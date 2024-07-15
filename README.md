@@ -108,7 +108,7 @@
 ## Screenshots
 
 ### Login Screen
-<img src="./screenshots/LogIn Screen.png">
+<img src="./screenshots/LogIn Screen.png" height="400">
 ![Login Screen](screenshots/OTP_Verification.png)
 
 ### Dashboard
