@@ -108,16 +108,24 @@
 ## Screenshots
 
 ### Login Screen
-![Login Screen](screenshots/login.png)
+![Login Screen](screenshots/LogIn%20Screen.png)
+![Login Screen](screenshots/OTP_Verification.png)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard1.png)
+![Dashboard](screenshots/Dashboard2.png)
 
 ### Document Upload
-![Document Upload](screenshots/document-upload.png)
+![Document Upload](screenshots/Add_Docs.png)
 
 ### Document List
-![Document List](screenshots/document-list.png)
+![Document List](screenshots/Categories.png)
+
+### User Update
+![User Update](screenshots/User_Update.png)
+
+### Settings
+![Settings](screenshots/Settings.png)
 
 ### Database Schema
 ![Database Schema](screenshots/Database%20Schema.png)
