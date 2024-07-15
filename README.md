@@ -108,7 +108,7 @@
 ## Screenshots
 
 ### Login Screen
-<img src="./screenshots/OTP_Verification.png">
+<img src="./screenshots/LogIn Screen.png">
 ![Login Screen](screenshots/OTP_Verification.png)
 
 ### Dashboard
