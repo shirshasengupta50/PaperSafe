@@ -72,9 +72,9 @@
     npm start
     ```
 
-    ### Frontend Development Status
+### Frontend Development Status
 
-    **Note :** The client-side of PaperSafe is currently under active development.
+**Note :** The client-side of PaperSafe is currently under active development.
 
 <!-- ### Frontend Setup
 
