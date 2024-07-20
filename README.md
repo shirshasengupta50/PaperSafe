@@ -108,7 +108,7 @@
 ## Screenshots
 
 ### Login Screen
-![Login Screen](screenshots/LogIn%20Screen.png)
+<img src="./screenshots/LogIn Screen.png">
 ![Login Screen](screenshots/OTP_Verification.png)
 
 ### Dashboard
@@ -139,7 +139,9 @@
 
 Watch a demo of PaperSafe in action:
 
-[[PaperSafe Demo Video]](https://www.youtube.com/watch?v=MUEMPgpRpT4)
+<video width="320" height="240" controls>
+  <source src="./videos/PaperSafe App.mp4" type="video/mp4">
+</video>
 
 
 ## Folder Structure
