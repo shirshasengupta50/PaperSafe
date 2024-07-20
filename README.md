@@ -139,9 +139,7 @@
 
 Watch a demo of PaperSafe in action:
 
-<video width="320" height="240" controls>
-  <source src="./videos/PaperSafe App.mp4" type="video/mp4">
-</video>
+### Link : https://www.youtube.com/watch?v=2oC5YGqQuwY&list=PL9C9-g_IdH7hYjITh443993h5Vj5bTJTA&index=4
 
 
 ## Folder Structure
