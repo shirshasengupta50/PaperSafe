@@ -72,9 +72,9 @@
     npm start
     ```
 
-    ### Frontend Development Status
+### Frontend Development Status
 
-    **Note :** The client-side of PaperSafe is currently under active development.
+**Note :** The client-side of PaperSafe is currently under active development.
 
 <!-- ### Frontend Setup
 
@@ -108,31 +108,31 @@
 ## Screenshots
 
 ### Login Screen
-<img src="./screenshots/LogIn Screen.png">
+![Login Screen](screenshots/LogIn%20Screen.png)
 ![Login Screen](screenshots/OTP_Verification.png)
 
 ### Dashboard
-![Dashboard](screenshots/Dashboard1.png)
-![Dashboard](screenshots/Dashboard2.png)
+<img src="./screenshots/Dashboard1.png" height="400">
+<img src="./screenshots/Dashboard2.png" height="400">
 
 ### Document Upload
-![Document Upload](screenshots/Add_Docs.png)
+<img src="./screenshots/Add_Docs.png" height="400">
 
 ### Document List
-![Document List](screenshots/Categories.png)
+<img src="./screenshots/Categories.png" height="400">
 
 ### User Update
-![User Update](screenshots/User_Update.png)
+<img src="./screenshots/User_Update.png" height="400">
 
 ### Settings
-![Settings](screenshots/Settings.png)
+<img src="./screenshots/Settings.png" height="400">
 
 ### Database Schema
-![Database Schema](screenshots/Database%20Schema.png)
+<img src="./screenshots/Database%20Schema.png" height="400">
 
 ### Technical Flow Diagrams
-![Technical Flow Diagrams](screenshots/Technical%20Flow%20Diagram.png)
-![Technical Flow Diagrams](screenshots/Technical%20Diagram.png)
+<img src="./screenshots/Technical%20Flow%20Diagram.png" height="400">
+<img src="./screenshots/Technical%20Diagram.png" height="400">
 
 
 ## Demo Video
